@@ -1,4 +1,4 @@
-package com.motionCBS.client;
+package com.motionCBS.client.RPC;
 
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.user.client.rpc.RemoteService;

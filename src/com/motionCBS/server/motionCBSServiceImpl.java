@@ -1,7 +1,7 @@
 package com.motionCBS.server;
 
 import com.google.gwt.user.server.rpc.RemoteServiceServlet;
-import com.motionCBS.client.motionCBSService;
+import com.motionCBS.client.RPC.motionCBSService;
 
 public class motionCBSServiceImpl extends RemoteServiceServlet implements motionCBSService {
     // Implementation of sample interface method
