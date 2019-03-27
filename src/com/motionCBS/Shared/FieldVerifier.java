@@ -43,8 +43,48 @@ public class FieldVerifier {
 
     public static boolean isValidAddress (String Address) {
         // check if address is empty (not allowed)
-        if (Address.isEmpty()) {
-            return false;
+            return !Address.isEmpty();
     }
+
+    public static boolean isValidMobileNo (String MobileNo) {
+        // check if mobile no. is empty (not allowed)
+        if (MobileNo.isEmpty()) {
+            return false;
+        }
+        // check if mobile no. contains letters (not allowed)
+        for (int n = 0; n < MobileNo.length(); n++) {
+            if (Character.isAlphabetic(MobileNo.charAt(n)))
+                return false;
+        }
+
+        //check if mobile no. contains exactly 8 digits
+        return MobileNo.length() == 8;
+    }
+
+    public static boolean isValidEducation (String Education) {
+        // check if education is empty (not allowed)
+        return !Education.isEmpty();
+    }
+
+    public static boolean isValidExperience (String Experience) {
+        // check if experience is empty (not allowed)
+        return !Experience.isEmpty();
+    }
+
+    public static boolean isValidHoursPrWeek (String HoursPrWeek) {
+        // check if experience is empty (not allowed)
+        return !HoursPrWeek.isEmpty();
+    }
+
+    public static boolean isValidPassword (String Password) {
+        //check if password is at least 4 characters
+        return Password.length() > 3;
+    }
+
+    public static boolean isValidTeamtype (String Teamtype) {
+        // check if teamtype is empty (not allowed)
+        return !Teamtype.isEmpty();
+    }
+
 
 }

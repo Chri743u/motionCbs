@@ -177,7 +177,13 @@ public class RegisterView extends Composite {
             if (FieldVerifier.isValidFname(txtFname.getText())
                     && FieldVerifier.isValidLname(txtLname.getText())
                     && FieldVerifier.isValidEmail(txtEmail.getText())
-                    && ){
+                    && FieldVerifier.isValidAddress(txtAddress.getText())
+                    && FieldVerifier.isValidMobileNo(txtMobileNo.getText())
+                    && FieldVerifier.isValidEducation(txtEducation.getText())
+                    && FieldVerifier.isValidExperience(lstExperience.getSelectedItemText())
+                    && FieldVerifier.isValidHoursPrWeek(lstHoursPrWeek.getSelectedItemText())
+                    && FieldVerifier.isValidPassword(txtPassword.getText())
+                    && FieldVerifier.isValidTeamtype(lstTeamtype.getSelectedItemText())){
 
 
             }
