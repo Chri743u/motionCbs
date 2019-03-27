@@ -12,6 +12,7 @@ import com.google.gwt.event.dom.client.ClickEvent;
  */
 //hej
     // hejsa
+    // hej
 public class motionCBS implements EntryPoint {
 
     /**
