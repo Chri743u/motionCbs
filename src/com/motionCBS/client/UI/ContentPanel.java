@@ -3,6 +3,7 @@ package com.motionCBS.client.UI;
 import com.google.gwt.user.client.ui.Composite;
 import com.google.gwt.user.client.ui.DeckLayoutPanel;
 import com.google.gwt.user.client.ui.Widget;
+import com.motionCBS.client.UI.admin.mainAdminView.MainAdminView;
 import com.motionCBS.client.UI.login.LoginView;
 import com.motionCBS.client.UI.register.RegisterView;
 import com.motionCBS.client.UI.user.mainUserView.MainUserView;
