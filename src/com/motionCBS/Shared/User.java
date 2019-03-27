@@ -14,9 +14,10 @@ public class User implements IsSerializable {
     private int hoursPrWeek;
     private String password;
     private String teamtype;
+    private int type;
 
     public User(int id, String fname, String lname, String email, String address, int mobilenr,
-                String education, int experience, int hoursPrWeek, String password, String teamtype) {
+                String education, int experience, int hoursPrWeek, String password, String teamtype, int type) {
         this.id = id;
         this.fname = fname;
         this.lname = lname;
@@ -28,6 +29,7 @@ public class User implements IsSerializable {
         this.hoursPrWeek = hoursPrWeek;
         this.password = password;
         this.teamtype = teamtype;
+        this.type = type;
     }
 
     public User(){}
@@ -56,6 +58,7 @@ public class User implements IsSerializable {
 
     public String getTeamtype() { return teamtype; }
 
+    public int getType() { return type; }
 
     // Setters
     public void setId(int id) { this.id = id; }
@@ -79,4 +82,6 @@ public class User implements IsSerializable {
     public void setPassword(String password) { this.password = password; }
 
     public void setTeamtype(String teamtype) { this.teamtype = teamtype; }
+
+    public void setType(int type) {this.type = type;}
 }
