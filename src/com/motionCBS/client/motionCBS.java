@@ -10,9 +10,6 @@ import com.google.gwt.event.dom.client.ClickEvent;
 /**
  * Entry point classes define <code>onModuleLoad()</code>
  */
-//hej
-    // hejsa
-    // hej
 public class motionCBS implements EntryPoint {
 
     /**
