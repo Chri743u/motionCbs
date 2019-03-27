@@ -5,6 +5,7 @@ import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.event.dom.client.ClickHandler;
 import com.google.gwt.uibinder.client.UiBinder;
 import com.google.gwt.user.client.ui.*;
+import com.motionCBS.Shared.FieldVerifier;
 
 public class RegisterView extends Composite {
     private VerticalPanel vPanel;
@@ -173,7 +174,7 @@ public class RegisterView extends Composite {
         @Override
         public void onClick(ClickEvent event) {
             // check if all fields are valid
-            if (FieldVerifier.isValidFname(txtFname.getMaxLength()>2) && FieldVerifier.isValidLname(txtLname.getVisibleLength()>2)){
+            if (FieldVerifier.isValidFname(txtFname.getText()) && FieldVerifier.isValidLname(txtLname.getText())){
 
 
             }
