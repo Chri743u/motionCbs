@@ -34,6 +34,10 @@ public class MainAdminView extends Composite {
     private StatisticsAdminView statisticsAdminView;
     private VerifyTrainerView verifyTrainerView;
 
+    interface MainViewUiBinder extends UiBinder<HTMLPanel, MainAdminView>{
+
+    }
+
     public MainAdminView() {
         initWidget(ourUiBinder.createAndBindUi(this));
 

@@ -26,7 +26,7 @@ public class MainUserView extends Composite {
     @UiField
     Button statisticBtn;
 
-    interface MainUserViewUiBinder extends UiBinder<DivElement, MainUserView> {}
+    interface MainUserViewUiBinder extends UiBinder<HTMLPanel, MainUserView> {}
 
     // The constructor is creating an instance of the panels and adding them to the DeckLayoutPanel
     public MainUserView() {
@@ -42,7 +42,6 @@ public class MainUserView extends Composite {
         centerPanel.showWidget(changeUserInfoUserView);
     }
 
-    private void initWidget(DivElement andBindUi) { }
 
     //This method is used to add the clickHandlers from the logic to the menu buttons
     public void addClickHandlers(ClickHandler clickHandler) {
