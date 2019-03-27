@@ -10,7 +10,7 @@ import com.google.gwt.event.dom.client.ClickEvent;
 /**
  * Entry point classes define <code>onModuleLoad()</code>
  */
-public class motionCBS implements EntryPoint {
+public class MotionCBS implements EntryPoint {
 
     /**
      * This is the entry point method.

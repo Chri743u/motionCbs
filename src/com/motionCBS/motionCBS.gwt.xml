@@ -6,7 +6,7 @@
     <inherits name='com.google.gwt.user.User'/>
 
     <!-- Specify the app entry point class.                   -->
-    <entry-point class='com.motionCBS.client.motionCBS'/>
+    <entry-point class='com.motionCBS.client.MotionCBS'/>
 
 
     <!-- Specify the app servlets.                   -->

@@ -9,7 +9,7 @@ import com.google.gwt.user.client.ui.*;
 import com.google.gwt.event.dom.client.ClickHandler;
 
 
-public class loginView extends Composite {
+public class LoginView extends Composite {
 
     private static loginViewUiBinder UiBinder = GWT.create(loginViewUiBinder.class);
     @UiField
@@ -21,10 +21,10 @@ public class loginView extends Composite {
     @UiField
     Button registerBtn;
 
-    interface loginViewUiBinder extends UiBinder<HTMLPanel, loginView> {
+    interface loginViewUiBinder extends UiBinder<HTMLPanel, LoginView> {
     }
 
-    public loginView() {
+    public LoginView() {
 
         initWidget(UiBinder.createAndBindUi(this));
 
