@@ -3,21 +3,12 @@ package com.motionCBS.client.RPC;
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.user.client.rpc.RemoteService;
 import com.google.gwt.user.client.rpc.RemoteServiceRelativePath;
+import com.motionCBS.Shared.User;
 
 @RemoteServiceRelativePath("motionCBSService")
 public interface motionCBSService extends RemoteService {
-    // Sample interface method of remote interface
-    String getMessage(String msg);
 
-    /**
-     * Utility/Convenience class.
-     * Use motionCBSService.App.getInstance() to access static instance of motionCBSServiceAsync
-     */
-    public static class App {
-        private static motionCBSServiceAsync ourInstance = GWT.create(motionCBSService.class);
+    User authorizeUser(String username, String password) throws Exception;
 
-        public static synchronized motionCBSServiceAsync getInstance() {
-            return ourInstance;
-        }
-    }
+
 }

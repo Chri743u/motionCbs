@@ -1,4 +1,4 @@
-package com.motionCBS.client.UI.admin.verifyTrainerView;
+package com.motionCBS.client.UI.admin.deleteTrainerView;
 
 import com.google.gwt.cell.client.ActionCell;
 import com.google.gwt.cell.client.NumberCell;
@@ -18,9 +18,10 @@ import com.motionCBS.Shared.User;
 
 import java.util.Comparator;
 
-public class VerifyTrainerView extends Composite {
+public class DeleteTrainerView extends Composite {
 
-    private static verifyTrainerViewUiBinder ourUiBinder = GWT.create(verifyTrainerViewUiBinder.class);
+    private static deleteTrainerViewUiBinder ourUiBinder = GWT.create(deleteTrainerViewUiBinder.class);
+
     @UiField
     DataGrid<User> dataGrid;
     @UiField
@@ -28,10 +29,10 @@ public class VerifyTrainerView extends Composite {
 
     private ActionCell.Delegate<User> actionCell;
 
-    interface verifyTrainerViewUiBinder extends UiBinder<HTMLPanel, VerifyTrainerView> {
+    interface deleteTrainerViewUiBinder extends UiBinder<HTMLPanel, DeleteTrainerView> {
     }
 
-    public VerifyTrainerView() {
+    public DeleteTrainerView() {
         initWidget(ourUiBinder.createAndBindUi(this));
 
         dataGrid.setPageSize(25);
@@ -40,7 +41,6 @@ public class VerifyTrainerView extends Composite {
 
         dataGrid.setAutoHeaderRefreshDisabled(true);
     }
-
     public void initUsersTable(ListDataProvider<User> dataProvider) {
         // Attach a column sort handler to the ListDataProvider to sort the list
         ColumnSortEvent.ListHandler<User> sortHandler = new ColumnSortEvent.ListHandler<User>(dataProvider.getList());
@@ -128,21 +128,20 @@ public class VerifyTrainerView extends Composite {
         //Teamtype
 
 
-        //Verify user button
-        ActionCell<User> verifyUserCell = new ActionCell<>("Verify user", actionCell);
-        Column<User, User> joinColumn = new Column<User, User>(verifyUserCell) {
+        //Delete user button
+        ActionCell<User> deleteUserCell = new ActionCell<>("Delete User", actionCell);
+        Column<User, User> joinColumn = new Column<User, User>(deleteUserCell) {
             @Override
             public User getValue(User user) {
                 return user;
             }
         };
 
-        dataGrid.addColumn(joinColumn, "Verify");
+        dataGrid.addColumn(joinColumn, "Delete");
         dataGrid.setColumnWidth(joinColumn, 7, Style.Unit.PX);
     }
 
     public void addClickHandler(ActionCell.Delegate<User> actionCell) {
         this.actionCell = actionCell;
     }
-
 }

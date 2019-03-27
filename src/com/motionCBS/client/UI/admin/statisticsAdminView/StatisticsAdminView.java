@@ -6,10 +6,10 @@ import com.google.gwt.user.client.ui.Composite;
 import com.google.gwt.user.client.ui.HTMLPanel;
 
 public class StatisticsAdminView extends Composite {
-    interface statisticsAdminViewUiBinder extends UiBinder<HTMLPanel, StatisticsAdminView> {
+    interface StatisticsAdminViewUiBinder extends UiBinder<HTMLPanel, StatisticsAdminView> {
     }
 
-    private static statisticsAdminViewUiBinder ourUiBinder = GWT.create(statisticsAdminViewUiBinder.class);
+    private static StatisticsAdminViewUiBinder ourUiBinder = GWT.create(StatisticsAdminViewUiBinder.class);
 
     public StatisticsAdminView() {
         initWidget(ourUiBinder.createAndBindUi(this));

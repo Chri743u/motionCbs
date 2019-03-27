@@ -15,3 +15,4 @@ public class ChangeUserInfoAdminView extends Composite {
         initWidget(ourUiBinder.createAndBindUi(this));
     }
 }
+
