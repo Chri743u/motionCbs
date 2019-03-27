@@ -1,16 +1,17 @@
 package com.motionCBS.client.UI.user.statisticsUserView;
 
 import com.google.gwt.core.client.GWT;
-import com.google.gwt.dom.client.DivElement;
 import com.google.gwt.uibinder.client.UiBinder;
+import com.google.gwt.user.client.ui.Composite;
+import com.google.gwt.user.client.ui.HTMLPanel;
 
-public class StatisticsUserView {
-    interface StatisticsUserViewUiBinder extends UiBinder<DivElement, StatisticsUserView> {
+public class StatisticsUserView extends Composite {
+    interface StatisticsUserViewUiBinder extends UiBinder<HTMLPanel, StatisticsUserView> {
     }
 
     private static StatisticsUserViewUiBinder ourUiBinder = GWT.create(StatisticsUserViewUiBinder.class);
 
     public StatisticsUserView() {
-        DivElement rootElement = ourUiBinder.createAndBindUi(this);
+        initWidget(ourUiBinder.createAndBindUi(this));
     }
 }
