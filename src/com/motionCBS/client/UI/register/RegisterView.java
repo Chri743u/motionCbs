@@ -174,7 +174,10 @@ public class RegisterView extends Composite {
         @Override
         public void onClick(ClickEvent event) {
             // check if all fields are valid
-            if (FieldVerifier.isValidFname(txtFname.getText()) && FieldVerifier.isValidLname(txtLname.getText())){
+            if (FieldVerifier.isValidFname(txtFname.getText())
+                    && FieldVerifier.isValidLname(txtLname.getText())
+                    && FieldVerifier.isValidEmail(txtEmail.getText())
+                    && ){
 
 
             }

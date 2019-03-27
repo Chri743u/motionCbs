@@ -32,17 +32,19 @@ public class FieldVerifier {
         return Lname.length() > 1;
     }
 
-    /*public static boolean isValidEmail (String Email) {
+    public static boolean isValidEmail (String Email) {
         // check if email is empty (not allowed)
         if (Email.isEmpty()) {
             return false;
         }
-        // check if email contains '@'
-        for (int n=0 ; n < Email.length() ; n++){
-            if (Character.@(Email.charAt(n)))
-                return true;
-        }
-        return ;
-    }*/
+        // check if email contains '@' and '.'
+        return Email.contains("@") || Email.contains(".");
+    }
+
+    public static boolean isValidAddress (String Address) {
+        // check if address is empty (not allowed)
+        if (Address.isEmpty()) {
+            return false;
+    }
 
 }
