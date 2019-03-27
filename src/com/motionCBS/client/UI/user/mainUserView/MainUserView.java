@@ -1,13 +1,13 @@
 package com.motionCBS.client.UI.user.mainUserView;
 
 import com.google.gwt.core.client.GWT;
-import com.google.gwt.dom.client.DivElement;
 import com.google.gwt.event.dom.client.ClickHandler;
 import com.google.gwt.uibinder.client.UiBinder;
 import com.google.gwt.uibinder.client.UiField;
 import com.google.gwt.user.client.ui.*;
 import com.motionCBS.client.UI.user.changeUserInfoUserView.ChangeUserInfoUserView;
 import com.motionCBS.client.UI.user.statisticsUserView.StatisticsUserView;
+import com.google.gwt.user.client.ui.HTMLPanel;
 
 // We use DockLayoutPanel which contains option to place panels/widgets in North, east, west, south
 // and center of the screen. We use DeckLayoutPanel in the center.

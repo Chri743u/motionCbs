@@ -1,16 +1,17 @@
 package com.motionCBS.client.UI.user.changeUserInfoUserView;
 
 import com.google.gwt.core.client.GWT;
-import com.google.gwt.dom.client.DivElement;
 import com.google.gwt.uibinder.client.UiBinder;
+import com.google.gwt.user.client.ui.Composite;
+import com.google.gwt.user.client.ui.HTMLPanel;
 
-public class ChangeUserInfoUserView {
-    interface ChangeUserInfoUserViewUiBinder extends UiBinder<DivElement, ChangeUserInfoUserView> {
+public class ChangeUserInfoUserView extends Composite {
+    interface ChangeUserInfoUserViewUiBinder extends UiBinder<HTMLPanel, ChangeUserInfoUserView> {
     }
 
     private static ChangeUserInfoUserViewUiBinder ourUiBinder = GWT.create(ChangeUserInfoUserViewUiBinder.class);
 
     public ChangeUserInfoUserView() {
-        DivElement rootElement = ourUiBinder.createAndBindUi(this);
+        initWidget(ourUiBinder.createAndBindUi(this));
     }
 }
