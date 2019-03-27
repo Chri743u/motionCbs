@@ -117,6 +117,51 @@ public class RegisterView extends Composite {
         lstTeamtype.addItem("Spinning");
         lstTeamtype.addItem("Stram op");
 
+        // setting visible items in drop-down lists
+        lstExperience.setVisibleItemCount(10);
+        lstHoursPrWeek.setVisibleItemCount(10);
+        lstTeamtype.setVisibleItemCount(4);
+
+        // set tooltip text
+        txtFname.setTitle("Fornavn skal mindst være 2 bogstaver");
+        txtLname.setTitle("Efternavn skal midst være 2 bogstaver");
+        txtEmail.setTitle("Email skal indeholde '@'");
+        txtAddress.setTitle("Adresse skal midst være 3 bogstaver");
+        txtMobileNo.setTitle("Mobil nr. skal være 8 tal");
+        txtEducation.setTitle("Uddannelse skal udfyldes");
+        lstExperience.setTitle("Erfaring skal udfyldes");
+        lstHoursPrWeek.setTitle("Timer pr. uge skal udfyldes");
+        txtPassword.setTitle("Password skal mindst være 4 tegn");
+        lstTeamtype.setTitle("Hold type skal vælges");
+
+        // add text and widgets to flextable
+        t.setText(0,0, "Indtast fornavn:");
+        t.setWidget(0,1,txtFname);
+        t.setText(1,0, "Indtast efternavn:");
+        t.setWidget(1,1, txtLname);
+        t.setText(2,0,"Indtast E-mail:");
+        t.setWidget(2,1,txtEmail);
+        t.setText(3,0, "Indtast adresse:");
+        t.setWidget(3,1,txtAddress);
+        t.setText(4,0,"Indtast mobil nr:");
+        t.setWidget(4,1,txtMobileNo);
+        t.setText(5,0,"Indtast uddannelse:");
+        t.setWidget(5,1,txtEducation);
+        t.setText(6,0,"Vælg års erfaring:");
+        t.setWidget(6,1,lstExperience);
+        t.setText(7,0,"Vælg aftalte timer pr. uge:");
+        t.setWidget(7,1,lstHoursPrWeek);
+        t.setText(8,0,"Indtast password:");
+        t.setWidget(8,1,txtPassword);
+        t.setText(9,0,"Vælg holdtype:");
+        t.setWidget(9,1,lstTeamtype);
+
+
+
+
+
+
+
 
 
 
