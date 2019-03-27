@@ -1,6 +1,8 @@
 package com.motionCBS.client.UI.register;
 
 import com.google.gwt.core.client.GWT;
+import com.google.gwt.event.dom.client.ClickEvent;
+import com.google.gwt.event.dom.client.ClickHandler;
 import com.google.gwt.uibinder.client.UiBinder;
 import com.google.gwt.user.client.ui.*;
 
@@ -156,17 +158,25 @@ public class RegisterView extends Composite {
         t.setText(9,0,"Vælg holdtype:");
         t.setWidget(9,1,lstTeamtype);
 
+        //
+
+        //add flextable to vPanel
+        vPanel.add(t);
+
+        // add click handler
+        btnSubmit.addClickHandler(new Handler1());
+    }
+
+    // click handler definition
+    private class Handler1 implements ClickHandler{
+
+        @Override
+        public void onClick(ClickEvent event) {
+            // check if all fields are valid
+            if (FieldVerifier.isValidFname(txtFname.getMaxLength()>2) && FieldVerifier.isValidLname(txtLname.getVisibleLength()>2)){
 
 
-
-
-
-
-
-
-
-
-
-
+            }
+        }
     }
 }
