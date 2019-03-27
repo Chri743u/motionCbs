@@ -30,6 +30,8 @@ public class User implements IsSerializable {
         this.teamtype = teamtype;
     }
 
+    public User(){}
+
 
     // Getters
     public int getId() {return id;}

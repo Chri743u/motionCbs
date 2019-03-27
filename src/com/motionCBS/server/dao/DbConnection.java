@@ -4,9 +4,8 @@ import com.google.gwt.user.server.rpc.RemoteServiceServlet;
 import com.motionCBS.Shared.User;
 import com.motionCBS.client.RPC.motionCBSService;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.SQLException;
+import java.sql.*;
+import java.util.ArrayList;
 
 public class DbConnection extends RemoteServiceServlet implements motionCBSService {
     /*
@@ -15,7 +14,7 @@ public class DbConnection extends RemoteServiceServlet implements motionCBSServi
      */
     private static final String URL = "jdbc:mysql://localhost:3306/motioncbs";
     private static final String USERNAME = "root";
-    private static final String PASSWORD = "";
+    private static final String PASSWORD = "emj39bqg";
 
 
 
@@ -42,7 +41,36 @@ public class DbConnection extends RemoteServiceServlet implements motionCBSServi
     }
 
     @Override
-    public User authorizeUser(String username, String password) throws Exception {
+    public User authorizeUser (String mobilenr, String password) {
+
+        ArrayList<User> authorizeUsers = new ArrayList<>();
+        ResultSet rs = null;
+
+        try {
+            PreparedStatement authorizeUser = connection.prepareStatement("SELECT * FROM users where mobilenr = ? AND password = ?");
+
+            authorizeUser.setString(1, mobilenr);
+            authorizeUser.setString(2,password);
+
+            rs = authorizeUser.executeQuery();
+
+            User user = new User();
+
+            //user.setUsername(rs.getString("username"));
+            //user.setPassword(rs.getString("password"));
+
+        /*while(rs.next()){
+            User user = new User();
+
+            user.setUsername(rs.getString("username"));
+            user.setPassword(rs.getString("password"));*/
+
+
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
         return null;
     }
-}
+    }

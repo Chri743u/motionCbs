@@ -24,11 +24,12 @@ public class LoginView extends Composite {
     interface loginViewUiBinder extends UiBinder<HTMLPanel, LoginView> {
     }
 
+
     public LoginView() {
 
         initWidget(UiBinder.createAndBindUi(this));
 
-        usernameTxtBox.getElement().setPropertyString("placeholder","username");
+        usernameTxtBox.getElement().setPropertyString("placeholder","mobileNo");
         passwordTxtBox.getElement().setPropertyString("placeholder", "password");
     }
 
