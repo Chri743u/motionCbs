@@ -6,7 +6,6 @@ import com.google.gwt.event.dom.client.ClickHandler;
 import com.google.gwt.uibinder.client.UiBinder;
 import com.google.gwt.uibinder.client.UiField;
 import com.google.gwt.user.client.ui.*;
-import com.motionCBS.client.UI.admin.statisticsAdminView.statisticsAdminView;
 import com.motionCBS.client.UI.user.changeUserInfoUserView.ChangeUserInfoUserView;
 import com.motionCBS.client.UI.user.statisticsUserView.StatisticsUserView;
 
