@@ -73,4 +73,9 @@ public class DbConnection extends RemoteServiceServlet implements motionCBSServi
 
         return null;
     }
+
+    @Override
+    public ArrayList<User> getUsers(int userId) throws IllegalArgumentException {
+        return null;
     }
+}
