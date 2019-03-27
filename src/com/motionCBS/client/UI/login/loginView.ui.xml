@@ -53,6 +53,7 @@
             <g:TextBox styleName="{style.textInput}" ui:field="usernameTxtBox" alignment="CENTER"/>
             <g:PasswordTextBox styleName="{style.textInput}" ui:field="passwordTxtBox" alignment="CENTER"/>
             <g:Button styleName="{style.btn}" text="Login" ui:field="loginBtn" />
+            <g:Button styleName="{style.btn}" text="Register" ui:field="registerBtn" />
         </g:VerticalPanel>
     </g:HTMLPanel>
 </ui:UiBinder>
