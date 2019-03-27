@@ -10,7 +10,6 @@ import com.google.gwt.event.dom.client.ClickHandler;
 
 
 public class loginView extends Composite {
-    //hej
 
     private static loginViewUiBinder UiBinder = GWT.create(loginViewUiBinder.class);
     @UiField
