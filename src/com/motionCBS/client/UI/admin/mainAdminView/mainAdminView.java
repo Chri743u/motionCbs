@@ -4,10 +4,7 @@ import com.google.gwt.core.client.GWT;
 import com.google.gwt.event.dom.client.ClickHandler;
 import com.google.gwt.uibinder.client.UiBinder;
 import com.google.gwt.uibinder.client.UiField;
-import com.google.gwt.user.client.ui.Button;
-import com.google.gwt.user.client.ui.Composite;
-import com.google.gwt.user.client.ui.DeckLayoutPanel;
-import com.google.gwt.user.client.ui.HTMLPanel;
+import com.google.gwt.user.client.ui.*;
 import com.motionCBS.client.UI.admin.changeUserInfoAdminView.ChangeUserInfoAdminView;
 import com.motionCBS.client.UI.admin.deleteTrainerView.DeleteTrainerView;
 import com.motionCBS.client.UI.admin.statisticsAdminView.StatisticsAdminView;
@@ -28,7 +25,7 @@ public class MainAdminView extends Composite {
     @UiField
     Button changeBtn;
     @UiField
-    Button statistics;
+    Button statisticsBtn;
     @UiField
     Button logoutBtn;
 
@@ -56,7 +53,32 @@ public class MainAdminView extends Composite {
     }
 
     public void addClickHandlers (ClickHandler clickHandler) {
-
+        verifyBtn.addClickHandler(clickHandler);
+        deleteBtn.addClickHandler(clickHandler);
+        changeBtn.addClickHandler(clickHandler);
+        statisticsBtn.addClickHandler(clickHandler);
+        logoutBtn.addClickHandler(clickHandler);
     }
 
+    public void changeView(Widget panel) {centerpanel.showWidget(panel);}
+
+    //Getter for the buttons
+    public Button getVerifyBtn() {return verifyBtn;}
+
+    public Button getDeleteBtn() {return deleteBtn; }
+
+    public Button getChangeBtn() {return changeBtn;}
+
+    public Button getStatisticsBtn() {return statisticsBtn;}
+
+    public Button getLogoutBtn() {return logoutBtn;}
+
+    //Getter for views
+    public ChangeUserInfoAdminView getChangeUserInfoAdminView() {return changeUserInfoAdminView;}
+
+    public DeleteTrainerView getDeleteTrainerView() {return deleteTrainerView;}
+
+    public StatisticsAdminView getStatisticsAdminView() {return statisticsAdminView;}
+
+    public VerifyTrainerView getVerifyTrainerView() {return verifyTrainerView;}
 }
