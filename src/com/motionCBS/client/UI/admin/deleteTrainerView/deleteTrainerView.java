@@ -5,13 +5,13 @@ import com.google.gwt.uibinder.client.UiBinder;
 import com.google.gwt.user.client.ui.Composite;
 import com.google.gwt.user.client.ui.HTMLPanel;
 
-public class deleteTrainerView extends Composite {
-    interface deleteTrainerViewUiBinder extends UiBinder<HTMLPanel, deleteTrainerView> {
+public class DeleteTrainerView extends Composite {
+    interface deleteTrainerViewUiBinder extends UiBinder<HTMLPanel, DeleteTrainerView> {
     }
 
     private static deleteTrainerViewUiBinder ourUiBinder = GWT.create(deleteTrainerViewUiBinder.class);
 
-    public deleteTrainerView() {
+    public DeleteTrainerView() {
         initWidget(ourUiBinder.createAndBindUi(this));
     }
 }

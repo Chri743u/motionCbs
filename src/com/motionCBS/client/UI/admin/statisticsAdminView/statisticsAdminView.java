@@ -5,13 +5,13 @@ import com.google.gwt.uibinder.client.UiBinder;
 import com.google.gwt.user.client.ui.Composite;
 import com.google.gwt.user.client.ui.HTMLPanel;
 
-public class statisticsAdminView extends Composite {
-    interface statisticsAdminViewUiBinder extends UiBinder<HTMLPanel, statisticsAdminView> {
+public class StatisticsAdminView extends Composite {
+    interface statisticsAdminViewUiBinder extends UiBinder<HTMLPanel, StatisticsAdminView> {
     }
 
     private static statisticsAdminViewUiBinder ourUiBinder = GWT.create(statisticsAdminViewUiBinder.class);
 
-    public statisticsAdminView() {
+    public StatisticsAdminView() {
         initWidget(ourUiBinder.createAndBindUi(this));
     }
 }
