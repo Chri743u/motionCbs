@@ -1,38 +1,33 @@
 package com.motionCBS.client.UI.user.changeUserInfoUserView;
 
 import com.google.gwt.core.client.GWT;
+import com.google.gwt.dom.client.Text;
 import com.google.gwt.event.dom.client.ClickHandler;
 import com.google.gwt.uibinder.client.UiBinder;
 import com.google.gwt.uibinder.client.UiField;
 import com.google.gwt.user.client.ui.*;
 import com.motionCBS.Shared.User;
 
+import javax.swing.*;
+
 public class ChangeUserInfoUserView extends Composite {
 
     private static ChangeUserInfoUserViewUiBinder ourUiBinder = GWT.create(ChangeUserInfoUserViewUiBinder.class);
 
-    @UiField
-    TextBox txtFname;
-    @UiField
-    TextBox txtLname;
-    @UiField
-    TextBox txtEmail;
-    @UiField
-    TextBox txtAddress;
-    @UiField
-    TextBox txtMobileNo;
-    @UiField
-    TextBox txtEducation;
-    @UiField
-    ListBox lstExperience;
-    @UiField
-    ListBox lstHoursPrWeek;
-    @UiField
-    TextBox txtPassword;
-    @UiField
-    ListBox lstTeamtype;
-    @UiField
-    Button changeProfileBtn;
+    @UiField TextBox txtFname;
+    @UiField TextBox txtLname;
+    @UiField TextBox txtEmail;
+    @UiField TextBox txtAddress;
+    @UiField TextBox txtMobileNo;
+    @UiField TextBox txtEducation;
+    @UiField TextBox txtExperience;
+    @UiField TextBox txtHoursPrWeek;
+    @UiField TextBox txtPassword;
+    @UiField RadioButton newCrossfitBtn;
+    @UiField RadioButton newHitBtn;
+    @UiField RadioButton newStramopBtn;
+    @UiField RadioButton newSpinningBtn;
+    @UiField Button changeProfileBtn;
 
     interface ChangeUserInfoUserViewUiBinder extends UiBinder<HTMLPanel, ChangeUserInfoUserView> {}
 
@@ -53,10 +48,25 @@ public class ChangeUserInfoUserView extends Composite {
         txtAddress.setText(user.getAddress());
         txtMobileNo.setTabIndex(user.getMobilenr()); // Måske forkert??
         txtEducation.setText(user.getEducation());
-        lstExperience.setTabIndex(user.getExperience()); // Måske forkert??
-        lstHoursPrWeek.setTabIndex(user.getHoursPrWeek()); // Måske forkert??
+        txtExperience.setTabIndex(user.getExperience()); // Måske forkert??
+        txtHoursPrWeek.setTabIndex(user.getHoursPrWeek()); // Måske forkert??
         txtPassword.setText(user.getPassword());
-        lstTeamtype.setName(user.getTeamtype()); // måske forkert??
+
+        if (user.getTeamtype().equalsIgnoreCase("Crossfit")){
+            newCrossfitBtn.setValue(true);
+            newCrossfitBtn.setEnabled(true);
+        } else if (user.getTeamtype().equalsIgnoreCase("Spinning")){
+            newSpinningBtn.setValue(true);
+            newSpinningBtn.setEnabled(true);
+        } else if (user.getTeamtype().equalsIgnoreCase("H:I.T.")){
+            newHitBtn.setValue(true);
+            newHitBtn.setEnabled(true);
+        } else if (user.getTeamtype().equalsIgnoreCase("Stram op")){
+            newStramopBtn.setValue(true);
+            newStramopBtn.setEnabled(true);
+        }
+
+
     }
 
     // Getters
@@ -72,11 +82,17 @@ public class ChangeUserInfoUserView extends Composite {
 
     public TextBox getTxtEducation() { return txtEducation; }
 
-    public ListBox getLstExperience() { return lstExperience; }
+    public TextBox getTxtExperience() { return txtExperience; }
 
-    public ListBox getLstHoursPrWeek() { return lstHoursPrWeek; }
+    public TextBox getTxtHoursPrWeek() { return txtHoursPrWeek; }
 
     public TextBox getTxtPassword() { return txtPassword; }
 
-    public ListBox getLstTeamtype() { return lstTeamtype; }
+    public RadioButton getNewCrossfitBtn() {return newCrossfitBtn;}
+
+    public RadioButton getNewHitBtn() {return newHitBtn;}
+
+    public RadioButton getNewStramopBtn() {return newStramopBtn;}
+
+    public RadioButton getNewSpinningBtn() {return newSpinningBtn;}
 }
