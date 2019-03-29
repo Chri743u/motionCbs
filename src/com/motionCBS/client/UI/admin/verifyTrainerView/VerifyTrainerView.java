@@ -125,8 +125,26 @@ public class VerifyTrainerView extends Composite {
                 return Integer.compare(u1.getMobilenr(), u2.getMobilenr());}
         });
 
-        //Teamtype
+        dataGrid.addColumn(mobileColumn,"MobileNo");
+        dataGrid.setColumnWidth(mobileColumn,7, Style.Unit.PX);
 
+        //Teamtype
+        Column<User, String> teamColumn = new Column<User, String>(new TextCell()) {
+            @Override
+            public String getValue(User user) {
+                return user.getTeamtype();
+            }
+        };
+        teamColumn.setSortable(true);
+        sortHandler.setComparator(teamColumn, new Comparator<User>() {
+            @Override
+            public int compare(User u1, User u2) {
+                return u1.getTeamtype().compareTo(u2.getTeamtype());
+            }
+        });
+
+        dataGrid.addColumn(teamColumn, "Teamtypes");
+        dataGrid.setColumnWidth(teamColumn,7, Style.Unit.PX);
 
         //Verify user button
         ActionCell<User> verifyUserCell = new ActionCell<>("Verify user", actionCell);

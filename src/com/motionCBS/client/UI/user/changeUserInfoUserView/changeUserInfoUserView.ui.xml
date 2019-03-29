@@ -58,6 +58,10 @@
             color: #333;
         }
 
+        .radioButtons {
+            margin-left: 10px;
+        }
+
     </ui:style>
 
     <g:HTMLPanel>
@@ -95,12 +99,12 @@
 
             <g:FlowPanel styleName="{style.changeInfoContainer}">
                 <g:Label styleName="{style.title}" text="Års erfaring:"></g:Label>
-                <g:ListBox ui:field="lstExperience" styleName="{style.textInput} {style.input}"></g:ListBox>
+                <g:TextBox ui:field="txtExperience" styleName="{style.textInput} {style.input}"></g:TextBox>
             </g:FlowPanel>
 
             <g:FlowPanel styleName="{style.changeInfoContainer}">
                 <g:Label styleName="{style.title}" text="Timer om ugen:"></g:Label>
-                <g:ListBox ui:field="lstHoursPrWeek" styleName="{style.textInput} {style.input}"></g:ListBox>
+                <g:TextBox ui:field="txtHoursPrWeek" styleName="{style.textInput} {style.input}"></g:TextBox>
             </g:FlowPanel>
 
             <g:FlowPanel styleName="{style.changeInfoContainer}">
@@ -110,7 +114,10 @@
 
             <g:FlowPanel styleName="{style.changeInfoContainer}">
                 <g:Label styleName="{style.title}" text="Holdtype:"></g:Label>
-                <g:ListBox ui:field="lstTeamtype" styleName="{style.textInput} {style.input}"></g:ListBox>
+                <g:RadioButton name="teamtype" styleName="{style.radioButtons}" ui:field="newCrossfitBtn" text="Crossfit"/>
+                <g:RadioButton name="teamtype" styleName="{style.radioButtons}" ui:field="newSpinningBtn" text="Spinning"/>
+                <g:RadioButton name="teamtype" styleName="{style.radioButtons}" ui:field="newHitBtn" text="H.I.T."/>
+                <g:RadioButton name="teamtype" styleName="{style.radioButtons}" ui:field="newStramopBtn" text="Stram Op"/>
             </g:FlowPanel>
 
             <g:Button styleName="{style.btn}" ui:field="changeProfileBtn" text="Ændre oplysninger"/>
