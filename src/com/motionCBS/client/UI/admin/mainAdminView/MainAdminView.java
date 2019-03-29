@@ -33,10 +33,7 @@ public class MainAdminView extends Composite {
     private DeleteTrainerView deleteTrainerView;
     private StatisticsAdminView statisticsAdminView;
     private VerifyTrainerView verifyTrainerView;
-
-    interface MainViewUiBinder extends UiBinder<HTMLPanel, MainAdminView>{
-
-    }
+    
 
     public MainAdminView() {
         initWidget(ourUiBinder.createAndBindUi(this));

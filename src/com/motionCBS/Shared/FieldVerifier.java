@@ -81,10 +81,10 @@ public class FieldVerifier {
         return Password.length() > 3;
     }
 
-    public static boolean isValidTeamtype (String Teamtype) {
+    /*public static boolean isValidTeamtype (String Teamtype) {
         // check if teamtype is empty (not allowed)
         return !Teamtype.isEmpty();
-    }
+    }*/
 
 
 }
